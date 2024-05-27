@@ -15,34 +15,6 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 
 function Passion() {
   const location = useLocation();
-  const imageRef = useRef(null);
-
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      const image = imageRef.current;
-      const rect = image.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-      const rotateX = y / 20;
-      const rotateY = -x / 20;
-
-      image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    };
-
-    const handleMouseLeave = () => {
-      imageRef.current.style.transform = "rotateX(0deg) rotateY(0deg)";
-    };
-
-    const image = imageRef.current;
-    image.addEventListener("mousemove", handleMouseMove);
-    image.addEventListener("mouseleave", handleMouseLeave);
-
-    // Cleanup event listeners on component unmount
-    return () => {
-      image.removeEventListener("mousemove", handleMouseMove);
-      image.removeEventListener("mouseleave", handleMouseLeave);
-    };
-  }, []);
 
   return (
     <Sidebar current={location.pathname}>
@@ -58,7 +30,13 @@ function Passion() {
             i am into{" "}
             <span class="typing-text">
               <Typed
-                strings={["ML DL RL", "Mathematics", "Systems"]}
+                strings={[
+                  "ML | DL | RL",
+                  "Mathematics",
+                  "DataBases",
+                  "DataSets",
+                  "Systems",
+                ]}
                 typeSpeed={100}
                 backSpeed={50}
                 loop
@@ -115,7 +93,6 @@ function Passion() {
         </div>
         <div class="image">
           <img
-            ref={imageRef}
             draggable="false"
             class="tilt"
             src="/images/IMG_2441.JPG"
@@ -132,7 +109,6 @@ function Passion() {
         <div class="row">
           <div class="image">
             <img
-              ref={imageRef}
               draggable="false"
               class="tilt"
               src="/images/IMG_2395.jpeg"
