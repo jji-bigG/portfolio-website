@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Sidebar from "../layouts/sidebar";
 import { useLocation } from "react-router-dom";
+
+import { ReactTyped as Typed } from "react-typed";
 
 import "./styles/passions.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,6 +15,34 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 
 function Passion() {
   const location = useLocation();
+  const imageRef = useRef(null);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const image = imageRef.current;
+      const rect = image.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      const rotateX = y / 20;
+      const rotateY = -x / 20;
+
+      image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    };
+
+    const handleMouseLeave = () => {
+      imageRef.current.style.transform = "rotateX(0deg) rotateY(0deg)";
+    };
+
+    const image = imageRef.current;
+    image.addEventListener("mousemove", handleMouseMove);
+    image.addEventListener("mouseleave", handleMouseLeave);
+
+    // Cleanup event listeners on component unmount
+    return () => {
+      image.removeEventListener("mousemove", handleMouseMove);
+      image.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, []);
 
   return (
     <Sidebar current={location.pathname}>
@@ -25,7 +55,15 @@ function Passion() {
             <br /> I'm <span>Jerry</span> Ji
           </h2>
           <p>
-            i am into <span class="typing-text">ML, SYS</span>
+            i am into{" "}
+            <span class="typing-text">
+              <Typed
+                strings={["ML DL RL", "Mathematics", "Systems"]}
+                typeSpeed={100}
+                backSpeed={50}
+                loop
+              />
+            </span>
           </p>
           <a href="#about" class="btn">
             <span>About Me</span>
@@ -37,7 +75,7 @@ function Passion() {
                 <a
                   class="linkedin"
                   aria-label="LinkedIn"
-                  href="https://www.linkedin.com/in/jigar-sable/"
+                  href="https://www.linkedin.com/in/jerryji2793/"
                   target="_blank"
                 >
                   <FontAwesomeIcon icon={faLinkedin} />
@@ -47,7 +85,7 @@ function Passion() {
                 <a
                   class="github"
                   aria-label="GitHub"
-                  href="https://github.com/jigar-sable"
+                  href="https://github.com/jji-bigG"
                   target="_blank"
                 >
                   <FontAwesomeIcon icon={faGithub} />
@@ -57,7 +95,7 @@ function Passion() {
                 <a
                   class="twitter"
                   aria-label="Twitter"
-                  href="https://twitter.com/jigar_sable"
+                  href="#"
                   target="_blank"
                 >
                   <FontAwesomeIcon icon={faTwitter} />
@@ -67,7 +105,7 @@ function Passion() {
                 <a
                   class="instagram"
                   aria-label="Instagram"
-                  href="https://www.instagram.com/jigarsable.dev"
+                  href="https://www.instagram.com/jerryji2793/"
                 >
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
@@ -77,16 +115,31 @@ function Passion() {
         </div>
         <div class="image">
           <img
+            ref={imageRef}
             draggable="false"
             class="tilt"
-            src="/images/clarkson.png"
+            src="/images/IMG_2441.JPG"
             alt=""
           />
         </div>
       </section>
 
       <section class="about" id="about">
+        <h2 class="heading">
+          <i class="fas fa-user-alt"></i> About <span>Me</span>
+        </h2>
+
         <div class="row">
+          <div class="image">
+            <img
+              ref={imageRef}
+              draggable="false"
+              class="tilt"
+              src="/images/IMG_2395.jpeg"
+              alt=""
+            />
+          </div>
+
           <div class="content">
             <h3>I'm Jerry</h3>
             <span class="tag">Cornell CS + Math</span>
