@@ -12,7 +12,7 @@
   }
   ```
 */
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Dialog, Menu, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
@@ -29,18 +29,18 @@ import {
   ChevronDownIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
+import { NavLink } from "react-router-dom";
 
 const navigation = [
-  { name: "My Passions", href: "", icon: UsersIcon, current: true },
+  { name: "My Passions", href: "/", icon: UsersIcon },
   {
     name: "Skills & Experiences",
-    href: "#",
+    href: "/skills",
     icon: WrenchScrewdriverIcon,
-    current: false,
   },
-  { name: "Blogs", href: "#", icon: NewspaperIcon, current: false },
-  { name: "Cornell", href: "#", icon: AcademicCapIcon, current: false },
-  { name: "Calendar", href: "#", icon: CalendarIcon, current: false },
+  { name: "Blogs", href: "/blogs", icon: NewspaperIcon },
+  { name: "Cornell", href: "/cornell", icon: AcademicCapIcon },
+  { name: "Calendar", href: "/calendar", icon: CalendarIcon },
 ];
 const projects = [
   { id: 1, name: "My ML Lib", href: "#", initial: "M", current: false },
@@ -63,7 +63,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-function Sidebar({ children }) {
+function Sidebar({ children, current }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -144,10 +144,10 @@ function Sidebar({ children }) {
                           <ul role="list" className="-mx-2 space-y-1">
                             {navigation.map((item) => (
                               <li key={item.name}>
-                                <a
-                                  href={item.href}
+                                <NavLink
+                                  to={item.href}
                                   className={classNames(
-                                    item.current
+                                    item.href === current
                                       ? "bg-indigo-700 text-white"
                                       : "text-indigo-200 hover:text-white hover:bg-indigo-700",
                                     "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
@@ -155,7 +155,7 @@ function Sidebar({ children }) {
                                 >
                                   <item.icon
                                     className={classNames(
-                                      item.current
+                                      item.href === current
                                         ? "text-white"
                                         : "text-indigo-200 group-hover:text-white",
                                       "h-6 w-6 shrink-0"
@@ -163,7 +163,7 @@ function Sidebar({ children }) {
                                     aria-hidden="true"
                                   />
                                   {item.name}
-                                </a>
+                                </NavLink>
                               </li>
                             ))}
                           </ul>
@@ -175,8 +175,8 @@ function Sidebar({ children }) {
                           <ul role="list" className="-mx-2 mt-2 space-y-1">
                             {projects.map((team) => (
                               <li key={team.name}>
-                                <a
-                                  href={team.href}
+                                <NavLink
+                                  to={team.href}
                                   className={classNames(
                                     team.current
                                       ? "bg-indigo-700 text-white"
@@ -188,7 +188,7 @@ function Sidebar({ children }) {
                                     {team.initial}
                                   </span>
                                   <span className="truncate">{team.name}</span>
-                                </a>
+                                </NavLink>
                               </li>
                             ))}
                           </ul>
@@ -231,10 +231,10 @@ function Sidebar({ children }) {
                   <ul role="list" className="-mx-2 space-y-1">
                     {navigation.map((item) => (
                       <li key={item.name}>
-                        <a
-                          href={item.href}
+                        <NavLink
+                          to={item.href}
                           className={classNames(
-                            item.current
+                            item.href === current
                               ? "bg-indigo-700 text-white"
                               : "text-indigo-200 hover:text-white hover:bg-indigo-700",
                             "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
@@ -242,7 +242,7 @@ function Sidebar({ children }) {
                         >
                           <item.icon
                             className={classNames(
-                              item.current
+                              item.href === current
                                 ? "text-white"
                                 : "text-indigo-200 group-hover:text-white",
                               "h-6 w-6 shrink-0"
@@ -250,7 +250,7 @@ function Sidebar({ children }) {
                             aria-hidden="true"
                           />
                           {item.name}
-                        </a>
+                        </NavLink>
                       </li>
                     ))}
                   </ul>
@@ -262,8 +262,8 @@ function Sidebar({ children }) {
                   <ul role="list" className="-mx-2 mt-2 space-y-1">
                     {projects.map((team) => (
                       <li key={team.name}>
-                        <a
-                          href={team.href}
+                        <NavLink
+                          to={team.href}
                           className={classNames(
                             team.current
                               ? "bg-indigo-700 text-white"
@@ -275,7 +275,7 @@ function Sidebar({ children }) {
                             {team.initial}
                           </span>
                           <span className="truncate">{team.name}</span>
-                        </a>
+                        </NavLink>
                       </li>
                     ))}
                   </ul>
