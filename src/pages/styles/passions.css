@@ -227,17 +227,19 @@ section {
     flex-direction: row;
     gap: 2rem;
     flex-wrap: wrap;
-    padding: 4rem;
+    padding: 1rem;
 }
 
 .about .row .image {
     text-align: center;
-    flex: 1 1 35rem;
+    flex: 1 1 25rem;
+    /* Adjusted flex basis */
 }
 
 .about .row .image img {
-    margin: 4rem;
-    width: 30rem;
+    margin: 2rem auto;
+    width: 25rem;
+    /* Reduced width */
     height: auto;
     border-radius: 5%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
@@ -251,25 +253,29 @@ section {
 }
 
 .about .row .content {
-    flex: 1 1 45rem;
-    padding: 3rem;
+    flex: 1 1 25rem;
+    /* Adjusted flex basis */
+    padding: 1rem;
 }
 
 .about .row .content h3 {
     color: rgb(27, 27, 27);
-    font-size: 2.5rem;
+    font-size: 2rem;
+    /* Reduced font size */
 }
 
 .about .row .content .tag {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    /* Reduced font size */
     color: #020133;
     font-weight: 600;
     margin-top: 1rem;
 }
 
 .about .row .content p {
-    font-size: 1.5rem;
-    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    /* Reduced font size */
+    margin-top: 1rem;
     font-family: "Nunito";
     font-weight: 600;
     text-transform: none;
@@ -278,7 +284,8 @@ section {
 .about .row .content .box-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1rem;
+    /* Reduced gap */
     font-family: "Nunito";
     font-weight: 600;
 }
@@ -292,11 +299,13 @@ section {
 }
 
 .resumebtn {
-    margin-top: 6rem;
+    margin-top: 4rem;
+    /* Reduced margin */
 }
 
 .resumebtn .btn {
-    padding: 1.7rem 3rem;
+    padding: 1.2rem 2rem;
+    /* Adjusted padding */
     border-radius: 0.5em;
     transition: 0.3s;
     color: #fff;
@@ -307,13 +316,15 @@ section {
 
 .resumebtn .btn span {
     font-weight: 600;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    /* Reduced font size */
     letter-spacing: 0.1rem;
 }
 
 .resumebtn .btn i {
     margin-left: 0.3rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    /* Reduced font size */
     transition: 0.3s;
 }
 
@@ -327,6 +338,10 @@ section {
 
 /* about media queries starts*/
 @media screen and (max-width: 600px) {
+    .about .row {
+        flex-direction: column;
+    }
+
     .about .row .image {
         margin-top: 2rem;
     }
@@ -350,6 +365,9 @@ section {
         gap: 0;
     }
 }
+
+/* about media queries ends*/
+/* about section ends */
 
 /* about media queries ends*/
 /* about section ends */

@@ -2,15 +2,14 @@ import React from "react";
 import Sidebar from "../layouts/sidebar";
 import { useLocation } from "react-router-dom";
 import LogoSkills from "../components/skills/logos";
+import ApplicantCard from "../components/skills/applicant_card";
 
 const Skills = () => {
   const location = useLocation();
 
   return (
     <Sidebar current={location.pathname}>
-      <h1 className="text-2xl font-semibold text-gray-900">
-        Tech Stacks I've worked with
-      </h1>
+      <ApplicantCard />
       <LogoSkills
         logos={[
           "/images/logos/mongodb.png",

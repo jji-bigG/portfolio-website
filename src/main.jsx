@@ -7,11 +7,18 @@ import Skills from "./pages/skills";
 import Blogs from "./pages/blogs";
 import Cornell from "./pages/cornell";
 import Calendar from "./pages/calendar";
+import Sidebar from "./layouts/sidebar";
+import NotFound from "./pages/404";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Passion />,
+    errorElement: (
+      <Sidebar>
+        <NotFound />
+      </Sidebar>
+    ),
   },
   {
     path: "/skills",
@@ -33,6 +40,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <React.Suspense fallback="Loading...">
+      <RouterProvider router={router} />
+    </React.Suspense>
   </React.StrictMode>
 );
