@@ -12,7 +12,7 @@
   }
   ```
 */
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useState } from "react";
 import { Dialog, Menu, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
@@ -326,7 +326,7 @@ function Sidebar({ children, current }) {
                 <input
                   id="search-field"
                   className="block h-full w-full border-0 py-0 pl-8 pr-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm"
-                  placeholder="Search..."
+                  placeholder="Ask AI..."
                   type="search"
                   name="search"
                 />

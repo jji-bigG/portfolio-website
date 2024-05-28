@@ -12,12 +12,14 @@ const Skills = () => {
       <ApplicantCard />
       <LogoSkills
         logos={[
+          "/images/logos/rustlang.png",
+          "/images/logos/pytorch.png",
+          "/images/logos/java.png",
           "/images/logos/mongodb.png",
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/MySQL_textlogo.svg/2560px-MySQL_textlogo.svg.png",
-          "https://akztcujgjipefxjrfsak.supabase.co/storage/v1/object/public/statics/perks/light/supabase.png",
-          "/images/logos/pyt.png",
-          "https://rust-lang.org/logos/rust-logo-512x512.png",
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/2560px-Nextjs-logo.svg.png",
+          "/images/logos/supabase.png",
+          "/images/logos/nextjs.png",
+          "/images/logos/python.png",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/TypeScript_Logo_%28Blue%29.svg/2560px-TypeScript_Logo_%28Blue%29.svg.png",
         ]}
       />
     </Sidebar>
