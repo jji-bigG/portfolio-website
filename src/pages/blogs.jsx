@@ -4,22 +4,57 @@ import { useLocation } from "react-router-dom";
 
 const posts = [
   {
-    id: 1,
-    title: "Boost your conversion rate",
+    id: 3,
+    title: "The SQL database",
     href: "#",
     description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel iusto corrupti dicta laboris incididunt.",
+      "Publishing my notes and understanding for Cornell's CS 4320: Database Systems after I watch the YouTube Playlist that Professor Trummer generously posted.",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png",
+    date: "Jun 16, 2024",
+    datetime: "2024-06-16",
+    category: { title: "Systems & Database", href: "#" },
+    author: {
+      name: "Jerry Ji",
+      role: "Cornell UG",
+      href: "#",
+      imageUrl: "/images/selfie.jpeg",
+    },
+  },
+  {
+    id: 1,
+    title: "Making my personal website",
+    href: "#",
+    description:
+      "Documenting the decision process and my learnings after making this personal website. This is mostly a review of what I already learned from previous (failed) web development projects.",
     imageUrl:
       "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80",
-    date: "Mar 16, 2020",
-    datetime: "2020-03-16",
-    category: { title: "Marketing", href: "#" },
+    date: "Jun 16, 2024",
+    datetime: "2024-06-16",
+    category: { title: "Web Development", href: "#" },
     author: {
-      name: "Michael Foster",
-      role: "Co-Founder / CTO",
+      name: "Jerry Ji",
+      role: "Cornell UG",
       href: "#",
-      imageUrl:
-        "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      imageUrl: "/images/selfie.jpeg",
+    },
+  },
+  {
+    id: 2,
+    title: "My ML Lib",
+    href: "#",
+    description:
+      "My understanding of tradtional ML algorithms summarized in this python library built solely with numpy. This is a great exercise to get deeper into how PyTorch is being made.",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLhsMlG1FGExpmAWbgZGXDv1iTcgtVEMwV_Q&s",
+    date: "May 27, 2024",
+    datetime: "2024-05-27",
+    category: { title: "Machine Learning", href: "#" },
+    author: {
+      name: "Jerry Ji",
+      role: "Cornell UG",
+      href: "#",
+      imageUrl: "/images/selfie.jpeg",
     },
   },
   // More posts...
@@ -34,11 +69,11 @@ function Blogs() {
         <div className="mx-auto max-w-7xl px-2 lg:px-3">
           <div className="mx-auto max-w-2xl lg:max-w-4xl">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Personal blog
+              My personal blog page
             </h2>
             <p className="mt-2 text-lg leading-8 text-gray-600">
-              My thoughts and learnings on machine learning, data management,
-              and algorithms.
+              My thoughts and learnings on machine learning, data systems,
+              software engineering, and algorithms.
             </p>
             <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
               {posts.map((post) => (
