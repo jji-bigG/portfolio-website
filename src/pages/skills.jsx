@@ -1,7 +1,7 @@
 import React from "react";
 import Sidebar from "../layouts/sidebar";
 import { useLocation } from "react-router-dom";
-import LogoSkills from "../components/skills/logos";
+import Logos from "../components/skills/logos";
 import ApplicantCard from "../components/skills/applicant_card";
 
 const Skills = () => {
@@ -9,19 +9,31 @@ const Skills = () => {
 
   return (
     <Sidebar current={location.pathname}>
-      <ApplicantCard />
-      <LogoSkills
+      <Logos
+        msg="Programming Languages:"
         logos={[
           "/images/logos/rustlang.png",
-          "/images/logos/pytorch.png",
-          "/images/logos/java.png",
-          "/images/logos/mongodb.png",
-          "/images/logos/supabase.png",
-          "/images/logos/nextjs.png",
           "/images/logos/python.png",
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/TypeScript_Logo_%28Blue%29.svg/2560px-TypeScript_Logo_%28Blue%29.svg.png",
+          "/images/logos/ocaml.png",
+          // "/images/logos/nodejs.png",
+          "/images/logos/java.png",
         ]}
       />
+      <Logos
+        msg="Frameworks:"
+        logos={[
+          "/images/logos/pytorch.png",
+          "/images/logos/mongodb.png",
+          "/images/logos/postgresql cp.png",
+          "/images/logos/nextjs.png",
+          "/images/logos/nuxtjs.png",
+        ]}
+      />
+      <Logos
+        msg="Developer Tools:"
+        logos={["/images/logos/supabase.png", "/images/logos/docker.png"]}
+      />
+      <ApplicantCard />
     </Sidebar>
   );
 };

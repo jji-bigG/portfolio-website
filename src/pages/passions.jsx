@@ -30,13 +30,7 @@ function Passion() {
             i am into{" "}
             <span class="typing-text">
               <Typed
-                strings={[
-                  "ML | DL | RL",
-                  "Mathematics",
-                  "DataBases",
-                  "DataSets",
-                  "Systems",
-                ]}
+                strings={["ML | DL | RL", "DataBases", "Systems"]}
                 typeSpeed={100}
                 backSpeed={50}
                 loop
@@ -91,7 +85,7 @@ function Passion() {
             </ul>
           </div>
         </div>
-        <div class="image">
+        <div class="image transition-all duration-300 ease-out">
           <img
             draggable="false"
             class="tilt"
@@ -107,7 +101,7 @@ function Passion() {
         </h2>
 
         <div class="row">
-          <div class="image">
+          <div class="image transition-all duration-300 ease-in-out">
             <img
               draggable="false"
               class="tilt"

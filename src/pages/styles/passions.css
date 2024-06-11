@@ -244,7 +244,7 @@ section {
     border-radius: 5%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
     mix-blend-mode: luminosity;
-    transition: 0.3s;
+    transition: all 0.7s ease-in-out;
     cursor: pointer;
 }
 
@@ -276,7 +276,7 @@ section {
     font-size: 1.2rem;
     /* Reduced font size */
     margin-top: 1rem;
-    font-family: "Nunito";
+    /* font-family: "Nunito"; */
     font-weight: 600;
     text-transform: none;
 }

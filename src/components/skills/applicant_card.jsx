@@ -115,11 +115,15 @@ export default function ApplicantCard() {
           companyName="LeYan Technologies 乐言科技"
           location="Shanghai, China"
           phrase="Internship"
+          workDetails={[
+            "Modified & Compiled OneFlow (PyTorch-like DL framework) from source using Docker environment",
+            "Cleaned customer support dialogues for RAG applications",
+          ]}
         />
         <Expandable
           position={"CS 3110 Teaching Assistant"}
           companyName={"Cornell University Bowers CIS"}
-          location={"Ithaca, NY"}
+          location={"Ithaca, NY, USA"}
           phrase="Teaching Assistant"
         />
         <Expandable
