@@ -9,6 +9,7 @@ import Cornell from "./pages/cornell";
 import Calendar from "./pages/calendar";
 import Sidebar from "./layouts/sidebar";
 import NotFound from "./pages/404";
+import SignIn from "./pages/auth/signin";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
         <NotFound />
       </Sidebar>
     ),
+  },
+  {
+    path: "/signin",
+    element: <SignIn />,
   },
   {
     path: "/skills",
