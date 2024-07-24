@@ -1,34 +1,29 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const stats = [
-  { label: "Founded", value: "2021" },
-  { label: "Employees", value: "37" },
-  { label: "Countries", value: "12" },
-  { label: "Raised", value: "$25M" },
-];
-
-function ProjectStats({ stats }) {
+function ProjectStats({ stats, link }) {
   return (
     <>
-      <dl className="mt-10 grid grid-cols-2 gap-8 border-t border-gray-900/10 pt-10 sm:grid-cols-4">
-        {stats.map((stat, statIdx) => (
-          <div key={statIdx}>
-            <dt className="text-sm font-semibold leading-6 text-gray-600">
-              {stat.label}
-            </dt>
-            <dd className="mt-2 text-3xl font-bold leading-10 tracking-tight text-gray-900">
-              {stat.value}
-            </dd>
-          </div>
-        ))}
-      </dl>
+      {stats && (
+        <dl className="mt-10 grid grid-cols-2 gap-8 border-t border-gray-900/10 pt-10 sm:grid-cols-4">
+          {stats.map((stat, statIdx) => (
+            <div key={statIdx}>
+              <dt className="text-sm font-semibold leading-6 text-gray-600">
+                {stat.label}
+              </dt>
+              <dd className="mt-2 text-3xl font-bold leading-10 tracking-tight text-gray-900">
+                {stat.value}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      )}
       <div className="mt-10 flex">
         <a
-          href="#"
+          href={link}
           className="text-base font-semibold leading-7 text-indigo-600"
         >
-          Learn more <span aria-hidden="true">→</span>
+          GitHub / Live Demo <span aria-hidden="true">→</span>
         </a>
       </div>
     </>
@@ -80,7 +75,7 @@ function ProjectQuote({ logoImageUrl, quote, author, position }) {
   );
 }
 
-function ProjectContentSection({ paragraphs, title, subtitle, stats }) {
+function ProjectContentSection({ paragraphs, title, subtitle, stats, link }) {
   return (
     // <div className="bg-white rounded-3xl shadow-2xl px-6 py-8 sm:px-12 sm:py-10 lg:px-8 lg:py-12">
     <div className="text-base leading-7 text-gray-700 lg:max-w-lg px-6 py-8">
@@ -90,7 +85,7 @@ function ProjectContentSection({ paragraphs, title, subtitle, stats }) {
       <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
         {title}
       </h1>
-      <ProjectStats stats={stats} />
+      <ProjectStats stats={stats} link={link} />
       <div className="max-w-xl">
         {paragraphs.map((paragraph, paragraphIdx) => (
           <p key={paragraphIdx} className="mt-6 text-lg leading-8">
@@ -145,6 +140,7 @@ export default function ProjectDetailPage() {
                 title={data.name}
                 subtitle={data.subtitle}
                 stats={data.stats}
+                link={data.link}
               />
             </div>
           </div>

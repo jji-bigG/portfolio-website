@@ -2,9 +2,11 @@
   "name": "My ML Lib",
   "subtitle": "A library of machine learning algorithms",
   "description": [
-    "A library of machine learning algorithms",
-    "that I have implemented from scratch"
+    "My ML Lib is a Python library that contains implementations of various machine learning algorithms. The library is designed to be easy to use and understand, making it suitable for beginners and experts alike.",
+    "The library includes algorithms for classification, regression, clustering, dimensionality reduction, and more. Each algorithm is implemented from scratch, allowing users to see how the algorithms work under the hood.",
+    "I built this library to learn more about machine learning algorithms and improve my programming skills. I also wanted to create a resource that others could use to learn about machine learning and experiment with different algorithms."
   ],
+  "link": "https://github.com/jji-bigG/my_ml_lib",
   "stats": [
     {
       "label": "Stars",
@@ -21,16 +23,10 @@
   ],
   "quotes": [
     {
-      "logoImageUrl": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-      "quote": "This is a quote from Google",
-      "author": "Google",
-      "position": "CEO"
-    },
-    {
-      "logoImageUrl": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-      "quote": "This is a quote from Google",
-      "author": "Google",
-      "position": "CEO"
+      "logoImageUrl": "https://www.cs.cornell.edu/courses/cs4780/2024sp/logo.jpeg",
+      "quote": "Mainly as a way to practice my Python + Numpy skills and transfer my knowledge in ML CS 4780 to a practical application.",
+      "author": "Jerry JI",
+      "position": "Developer"
     }
   ]
 }

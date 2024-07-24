@@ -1,0 +1,27 @@
+{
+  "name": "Portfolio Website",
+  "subtitle": "To showcase my projects and skills",
+  "description": [
+    "This is my personal portfolio website. It is a static website built using HTML, CSS, and JavaScript. The website is hosted on GitHub Pages.",
+    "The website is responsive and mobile-friendly. It showcases my projects, skills, and contact information. It also has a blog section where I write about my projects and experiences.",
+    "I built this website to showcase my projects and skills to potential employers and clients. I also use it as a platform to share my knowledge and experiences with the community."
+  ],
+  "stats": [
+    {
+      "label": "Styling",
+      "value": "Tailwind"
+    },
+    {
+      "label": "Framework",
+      "value": "NextJS"
+    }
+  ],
+  "link": "https://github.com/jji-bigG/portfolio-website",
+  "quotes": [
+    {
+      "quote": "Making it clean simple and easy to navigate is the motivation behind this project.",
+      "author": "Jerry Ji",
+      "position": "Developer"
+    }
+  ]
+}

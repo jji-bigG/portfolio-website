@@ -43,7 +43,13 @@ const navigation = [
   // { name: "Calendar", href: "/calendar", icon: CalendarIcon },
 ];
 const projects = [
-  { id: 1, name: "My ML Lib", href: "#", initial: "M", current: false },
+  {
+    id: 1,
+    name: "My ML Lib",
+    href: "/projects/my_ml_lib",
+    initial: "M",
+    current: false,
+  },
   { id: 2, name: "Rust DB", href: "#", initial: "R", current: false },
   {
     id: 3,
@@ -52,7 +58,13 @@ const projects = [
     initial: "K",
     current: false,
   },
-  { id: 4, name: "Portfolio Website", href: "#", initial: "P", current: false },
+  {
+    id: 4,
+    name: "Portfolio Website",
+    href: "/projects/portfolio_website",
+    initial: "P",
+    current: false,
+  },
 ];
 const userNavigation = [
   { name: "Your profile", href: "#" },
