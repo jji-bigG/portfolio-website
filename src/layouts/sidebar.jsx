@@ -44,26 +44,29 @@ const navigation = [
 ];
 const projects = [
   {
-    id: 1,
+    name: "Contract Management",
+    href: "/projects/contract_management",
+    initial: "R",
+  },
+  {
+    name: "Cornell CourseSphere",
+    href: "/projects/cornell_coursesphere",
+    initial: "C",
+  },
+  {
     name: "My ML Lib",
     href: "/projects/my_ml_lib",
     initial: "M",
-    current: false,
   },
-  { id: 2, name: "Rust DB", href: "#", initial: "R", current: false },
   {
-    id: 3,
     name: "Kaggle Competitions",
     href: "#",
     initial: "K",
-    current: false,
   },
   {
-    id: 4,
     name: "Portfolio Website",
     href: "/projects/portfolio_website",
     initial: "P",
-    current: false,
   },
 ];
 const userNavigation = [
@@ -288,21 +291,23 @@ function Sidebar({ children, current }) {
                             My projects
                           </div>
                           <ul role="list" className="-mx-2 mt-2 space-y-1">
-                            {projects.map((team) => (
-                              <li key={team.name}>
+                            {projects.map((project, i) => (
+                              <li key={i}>
                                 <NavLink
-                                  to={team.href}
+                                  to={project.href}
                                   className={classNames(
-                                    team.current
+                                    project.current
                                       ? "bg-indigo-700 text-white"
                                       : "text-indigo-200 hover:text-white hover:bg-indigo-700",
                                     "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                                   )}
                                 >
                                   <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-indigo-400 bg-indigo-500 text-[0.625rem] font-medium text-white">
-                                    {team.initial}
+                                    {project.initial}
                                   </span>
-                                  <span className="truncate">{team.name}</span>
+                                  <span className="truncate">
+                                    {project.name}
+                                  </span>
                                 </NavLink>
                               </li>
                             ))}
@@ -375,21 +380,21 @@ function Sidebar({ children, current }) {
                     My projects
                   </div>
                   <ul role="list" className="-mx-2 mt-2 space-y-1">
-                    {projects.map((team) => (
-                      <li key={team.name}>
+                    {projects.map((project, i) => (
+                      <li key={i}>
                         <NavLink
-                          to={team.href}
+                          to={project.href}
                           className={classNames(
-                            team.current
+                            project.current
                               ? "bg-indigo-700 text-white"
                               : "text-indigo-200 hover:text-white hover:bg-indigo-700",
                             "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                           )}
                         >
                           <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-indigo-400 bg-indigo-500 text-[0.625rem] font-medium text-white">
-                            {team.initial}
+                            {project.initial}
                           </span>
-                          <span className="truncate">{team.name}</span>
+                          <span className="truncate">{project.name}</span>
                         </NavLink>
                       </li>
                     ))}

@@ -1,0 +1,31 @@
+{
+  "name": "CourseSphere",
+  "subtitle": "LLM powered AI assistant for Cornell students",
+  "description": [
+    "CourseSphere is an AI-powered assistant for Cornell students that helps them find and register for courses. The assistant uses natural language processing (NLP) to understand student queries and provide relevant course information.",
+    "Students can ask the assistant questions about course availability, prerequisites, instructors, and more. The assistant can also recommend courses based on a student's interests, schedule, and academic requirements.",
+    "CourseSphere is designed to make the course selection process easier and more efficient for students. By providing personalized recommendations and answering common questions, the assistant helps students make informed decisions about their course selections."
+  ],
+  "link": "https://github.com/LambdaAK/CourseSphere",
+  "stats": [
+    {
+      "label": "Courses",
+      "value": "19k"
+    },
+    {
+      "label": "Faculties",
+      "value": "8k"
+    },
+    {
+      "label": "Active Users",
+      "value": "100+"
+    }
+  ],
+  "quotes": [
+    {
+      "quote": "CourseSphere is designed to simplify the course selection process for Cornell students, helping them find and register for courses that align with their academic goals and interests.",
+      "author": "Jerry Ji",
+      "position": "Developer"
+    }
+  ]
+}
