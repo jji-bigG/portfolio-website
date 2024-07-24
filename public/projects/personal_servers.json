@@ -1,0 +1,24 @@
+{
+  "name": "Personal Servers",
+  "subtitle": "Debian, Nginx, Docker, V2Ray, Scrapy, and more",
+  "description": [
+    "I have a few personal servers that I use for various purposes, like news scraping, VPN tunneling, and web hosting. They are located at my home and in the cloud.",
+    "For example, I scrape news articles daily from various sources and store them in a database for analysis."
+  ],
+  "stats": [
+    {
+      "label": "Servers",
+      "value": "3"
+    },
+    {
+      "label": "Services",
+      "value": "10+"
+    }
+  ],
+  "quotes": [
+    {
+      "quote": "It's not as hard as it sounds. I have learned a lot about Linux, networking, and server management by setting up and maintaining my own servers.",
+      "author": "Jerry Ji"
+    }
+  ]
+}

@@ -18,14 +18,16 @@ function ProjectStats({ stats, link }) {
           ))}
         </dl>
       )}
-      <div className="mt-10 flex">
-        <a
-          href={link}
-          className="text-base font-semibold leading-7 text-indigo-600"
-        >
-          GitHub / Live Demo <span aria-hidden="true">→</span>
-        </a>
-      </div>
+      {link && (
+        <div className="mt-10 flex">
+          <a
+            href={link}
+            className="text-base font-semibold leading-7 text-indigo-600"
+          >
+            GitHub / Live Demo <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      )}
     </>
   );
 }

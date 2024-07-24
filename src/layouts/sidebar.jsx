@@ -29,12 +29,12 @@ import {
   ChevronDownIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const navigation = [
   { name: "My Passions", href: "/", icon: UsersIcon },
   {
-    name: "Skills & Experiences",
+    name: "Work Experiences",
     href: "/skills",
     icon: WrenchScrewdriverIcon,
   },
@@ -59,9 +59,9 @@ const projects = [
     initial: "M",
   },
   {
-    name: "Kaggle Competitions",
-    href: "#",
-    initial: "K",
+    name: "Scrapy, Linux, V2Ray",
+    href: "/projects/personal_servers",
+    initial: "S",
   },
   {
     name: "Portfolio Website",
@@ -80,16 +80,7 @@ function classNames(...classes) {
 
 function SidebarSearch() {
   return (
-    <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 bg-white px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
-      <button
-        type="button"
-        className="-m-2.5 p-2.5 text-gray-700 lg:hidden"
-        onClick={() => setSidebarOpen(true)}
-      >
-        <span className="sr-only">Open sidebar</span>
-        <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-      </button>
-
+    <>
       {/* Separator */}
       <div className="h-6 w-px bg-gray-900/10 lg:hidden" aria-hidden="true" />
 
@@ -177,12 +168,13 @@ function SidebarSearch() {
           </Menu>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
 function Sidebar({ children, current }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <>
@@ -248,7 +240,7 @@ function Sidebar({ children, current }) {
                     </div>
                   </Transition.Child>
                   {/* Sidebar component, swap this element with another sidebar if you like */}
-                  <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-indigo-600 px-6 pb-4">
+                  <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-sky-600 px-6 pb-4">
                     <div className="flex h-16 shrink-0 items-center">
                       <img
                         className="h-8 w-auto"
@@ -265,17 +257,17 @@ function Sidebar({ children, current }) {
                                 <NavLink
                                   to={item.href}
                                   className={classNames(
-                                    item.href === current
-                                      ? "bg-indigo-700 text-white"
-                                      : "text-indigo-200 hover:text-white hover:bg-indigo-700",
+                                    location.pathname === item.href
+                                      ? "bg-sky-700 text-white"
+                                      : "text-sky-200 hover:text-white hover:bg-sky-700",
                                     "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                                   )}
                                 >
                                   <item.icon
                                     className={classNames(
-                                      item.href === current
+                                      location.pathname === item.href
                                         ? "text-white"
-                                        : "text-indigo-200 group-hover:text-white",
+                                        : "text-sky-200 group-hover:text-white",
                                       "h-6 w-6 shrink-0"
                                     )}
                                     aria-hidden="true"
@@ -287,7 +279,7 @@ function Sidebar({ children, current }) {
                           </ul>
                         </li>
                         <li>
-                          <div className="text-xs font-semibold leading-6 text-indigo-200">
+                          <div className="text-xs font-semibold leading-6 text-sky-200">
                             My projects
                           </div>
                           <ul role="list" className="-mx-2 mt-2 space-y-1">
@@ -296,13 +288,13 @@ function Sidebar({ children, current }) {
                                 <NavLink
                                   to={project.href}
                                   className={classNames(
-                                    project.current
-                                      ? "bg-indigo-700 text-white"
-                                      : "text-indigo-200 hover:text-white hover:bg-indigo-700",
+                                    location.pathname === project.href
+                                      ? "bg-sky-700 text-white"
+                                      : "text-sky-200 hover:text-white hover:bg-sky-700",
                                     "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                                   )}
                                 >
-                                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-indigo-400 bg-indigo-500 text-[0.625rem] font-medium text-white">
+                                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-sky-400 bg-sky-500 text-[0.625rem] font-medium text-white">
                                     {project.initial}
                                   </span>
                                   <span className="truncate">
@@ -316,10 +308,10 @@ function Sidebar({ children, current }) {
                         <li className="mt-auto">
                           <a
                             href="#"
-                            className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white"
+                            className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-sky-200 hover:bg-sky-700 hover:text-white"
                           >
                             <ClipboardDocumentCheckIcon
-                              className="h-6 w-6 shrink-0 text-indigo-200 group-hover:text-white"
+                              className="h-6 w-6 shrink-0 text-sky-200 group-hover:text-white"
                               aria-hidden="true"
                             />
                             CV / Resume
@@ -337,7 +329,7 @@ function Sidebar({ children, current }) {
         {/* Static sidebar for desktop */}
         <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
           {/* Sidebar component, swap this element with another sidebar if you like */}
-          <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-indigo-600 px-6 pb-4">
+          <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-sky-600 px-6 pb-4">
             <div className="flex h-16 shrink-0 items-center">
               <img
                 className="h-8 w-auto"
@@ -354,17 +346,17 @@ function Sidebar({ children, current }) {
                         <NavLink
                           to={item.href}
                           className={classNames(
-                            item.href === current
-                              ? "bg-indigo-700 text-white"
-                              : "text-indigo-200 hover:text-white hover:bg-indigo-700",
+                            location.pathname === item.href
+                              ? "bg-sky-700 text-white"
+                              : "text-sky-200 hover:text-white hover:bg-sky-700",
                             "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                           )}
                         >
                           <item.icon
                             className={classNames(
-                              item.href === current
+                              location.pathname === item.href
                                 ? "text-white"
-                                : "text-indigo-200 group-hover:text-white",
+                                : "text-sky-200 group-hover:text-white",
                               "h-6 w-6 shrink-0"
                             )}
                             aria-hidden="true"
@@ -376,7 +368,7 @@ function Sidebar({ children, current }) {
                   </ul>
                 </li>
                 <li>
-                  <div className="text-xs font-semibold leading-6 text-indigo-200">
+                  <div className="text-xs font-semibold leading-6 text-sky-200">
                     My projects
                   </div>
                   <ul role="list" className="-mx-2 mt-2 space-y-1">
@@ -385,13 +377,13 @@ function Sidebar({ children, current }) {
                         <NavLink
                           to={project.href}
                           className={classNames(
-                            project.current
-                              ? "bg-indigo-700 text-white"
-                              : "text-indigo-200 hover:text-white hover:bg-indigo-700",
+                            location.pathname === project.href
+                              ? "bg-sky-700 text-white"
+                              : "text-sky-200 hover:text-white hover:bg-sky-700",
                             "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
                           )}
                         >
-                          <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-indigo-400 bg-indigo-500 text-[0.625rem] font-medium text-white">
+                          <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-sky-400 bg-sky-500 text-[0.625rem] font-medium text-white">
                             {project.initial}
                           </span>
                           <span className="truncate">{project.name}</span>
@@ -402,11 +394,11 @@ function Sidebar({ children, current }) {
                 </li>
                 <li className="mt-auto">
                   <a
-                    href="#"
-                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white"
+                    href="/Ruiyang_Ji_Resume.pdf"
+                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-sky-200 hover:bg-sky-700 hover:text-white"
                   >
                     <ClipboardDocumentCheckIcon
-                      className="h-6 w-6 shrink-0 text-indigo-200 group-hover:text-white"
+                      className="h-6 w-6 shrink-0 text-sky-200 group-hover:text-white"
                       aria-hidden="true"
                     />
                     CV / Resume
@@ -418,6 +410,16 @@ function Sidebar({ children, current }) {
         </div>
 
         <div className="lg:pl-72">
+          <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 bg-white px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
+            <button
+              type="button"
+              className="-m-2.5 p-2.5 text-gray-700 lg:hidden"
+              onClick={() => setSidebarOpen(true)}
+            >
+              <span className="sr-only">Open sidebar</span>
+              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
           {/* <SidebarSearch /> */}
           <main className="py-10">
             <div className="px-4 sm:px-6 lg:px-8">{children}</div>

@@ -2,25 +2,34 @@
   "name": "Contract Management System",
   "subtitle": "A web app for signing and managing contracts",
   "description": [
-    "The Contract Management System is a web application that allows users to create, sign, and manage contracts online. The app is built using the MERN stack (MongoDB, Express, React, Node.js) and uses JSON Web Tokens for authentication.",
-    "Users can create contracts by filling out a form with details such as the parties involved, the terms of the contract, and the signature fields. Once a contract is created, users can send it to other parties for review and signature.",
+    "This is a web app for my dad's small business to eliminate the operational overhead in creating contracts for thousands of clients, factory owners who frequently need to buy and sell chemical products.",
+    "This allows us to reduce redundant work in writing PDF contracts, sending them to clients, and tracking their signing status. It makes the entire process more efficient and more authoritative for clients to trust.",
     "The app also includes features for managing contracts, such as tracking the status of contracts, setting reminders for important dates, and archiving old contracts. Users can view and search for contracts, filter contracts by status, and generate reports on contract activity."
   ],
   "stats": [
     {
       "label": "Active Users",
-      "value": 60
+      "value": "70+"
     },
     {
-      "label": "Contracts Daily",
+      "label": "Contracts/Day",
       "value": "500+"
+    },
+    {
+      "label": "Reduce staff",
+      "value": "25%"
     }
   ],
   "quotes": [
     {
-      "quote": "The Contract Management System is designed to streamline the contract creation and signing process, making it easier for users to manage their contracts online.",
+      "quote": "I was able to gain experiences in DevOps and CI/CD engineering as we integrate with Alibaba Cloud and Jenkins, furthering my Linux experience and Django + React skills.",
       "author": "Jerry Ji",
       "position": "Developer"
+    },
+    {
+      "quote": "We have too many buy and sell everyday by every staff that they simply cannot keep up with the paperwork in the hundreds. This can reduce workloads and allow us to cut down on staff.",
+      "author": "Zhengdong Ji",
+      "position": "Kinway"
     }
   ],
   "unused": {
