@@ -243,7 +243,7 @@ section {
     height: auto;
     border-radius: 5%;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
-    mix-blend-mode: luminosity;
+    /* mix-blend-mode: luminosity; */
     transition: all 0.7s ease-in-out;
     cursor: pointer;
 }

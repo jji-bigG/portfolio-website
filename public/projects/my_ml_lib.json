@@ -1,0 +1,36 @@
+{
+  "name": "My ML Lib",
+  "subtitle": "A library of machine learning algorithms",
+  "description": [
+    "A library of machine learning algorithms",
+    "that I have implemented from scratch"
+  ],
+  "stats": [
+    {
+      "label": "Stars",
+      "value": "100"
+    },
+    {
+      "label": "Forks",
+      "value": "20"
+    },
+    {
+      "label": "Contributors",
+      "value": "5"
+    }
+  ],
+  "quotes": [
+    {
+      "logoImageUrl": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+      "quote": "This is a quote from Google",
+      "author": "Google",
+      "position": "CEO"
+    },
+    {
+      "logoImageUrl": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+      "quote": "This is a quote from Google",
+      "author": "Google",
+      "position": "CEO"
+    }
+  ]
+}

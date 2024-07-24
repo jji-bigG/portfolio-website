@@ -6,13 +6,13 @@ const posts = [
   {
     id: 3,
     title: "The SQL database",
-    href: "#",
+    href: "/blogs/3",
     description:
       "Publishing my notes and understanding for Cornell's CS 4320: Database Systems after I watch the YouTube Playlist that Professor Trummer generously posted.",
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png",
-    date: "Jun 16, 2024",
-    datetime: "2024-06-16",
+    date: "Jul 8, 2024",
+    datetime: "2024-07-8",
     category: { title: "Systems & Database", href: "#" },
     author: {
       name: "Jerry Ji",

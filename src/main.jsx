@@ -10,6 +10,8 @@ import Calendar from "./pages/calendar";
 import Sidebar from "./layouts/sidebar";
 import NotFound from "./pages/404";
 import SignIn from "./pages/auth/signin";
+import BlogPage from "./pages/blog_page";
+import ProjectDetailPage from "./pages/project_detail";
 
 const router = createBrowserRouter([
   {
@@ -34,12 +36,24 @@ const router = createBrowserRouter([
     element: <Blogs />,
   },
   {
+    path: "/blogs/page",
+    element: <BlogPage />,
+  },
+  {
     path: "/cornell",
     element: <Cornell />,
   },
   {
     path: "/calendar",
     element: <Calendar />,
+  },
+  {
+    path: "/projects/:name",
+    element: (
+      <Sidebar>
+        <ProjectDetailPage />
+      </Sidebar>
+    ),
   },
 ]);
 

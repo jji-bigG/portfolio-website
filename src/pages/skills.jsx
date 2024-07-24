@@ -9,29 +9,34 @@ const Skills = () => {
 
   return (
     <Sidebar current={location.pathname}>
+      <h5 className="text-2xl font-bold mb-2">I have previously worked with</h5>
       <Logos
         msg="Programming Languages:"
         logos={[
-          "/images/logos/rustlang.png",
           "/images/logos/python.png",
           "/images/logos/ocaml.png",
+          "/images/logos/ts.png",
           // "/images/logos/nodejs.png",
           "/images/logos/java.png",
+          "/images/logos/rustlang.png",
         ]}
       />
       <Logos
         msg="Frameworks:"
         logos={[
           "/images/logos/pytorch.png",
-          "/images/logos/mongodb.png",
-          "/images/logos/postgresql cp.png",
           "/images/logos/nextjs.png",
           "/images/logos/nuxtjs.png",
         ]}
       />
       <Logos
-        msg="Developer Tools:"
-        logos={["/images/logos/supabase.png", "/images/logos/docker.png"]}
+        msg="Microservices:"
+        logos={[
+          "/images/logos/supabase.png",
+          "/images/logos/docker.png",
+          "/images/logos/mongodb.png",
+          "/images/logos/postgresql cp.png",
+        ]}
       />
       <ApplicantCard />
     </Sidebar>
