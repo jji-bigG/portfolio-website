@@ -9,6 +9,7 @@ COPY package*.json ./
 
 # Install dependencies
 RUN npm install
+RUN npm i -g serve
 
 # Copy the entire project to the working directory
 COPY . .
@@ -20,4 +21,4 @@ RUN npm run build
 EXPOSE 3000
 
 # Define the command to run the app
-CMD ["npm", "start"]
+CMD ["serve", "-s", "dist", "-l", "3000"]
