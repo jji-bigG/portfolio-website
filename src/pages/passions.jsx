@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar, { SidebarTwoColumn } from "../layouts/sidebar";
 import { useLocation } from "react-router-dom";
 
@@ -11,9 +11,12 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
-import { MapPinIcon, ServerStackIcon } from "@heroicons/react/24/outline";
+import { MapPinIcon, ServerStackIcon } from "@heroicons/react/24/solid";
+import { ArrowDownIcon } from "@heroicons/react/24/outline";
 
 function Passion() {
+  const [openAbout, setOpenAbout] = useState("hidden");
+
   return (
     <SidebarTwoColumn
       aside={
@@ -39,14 +42,15 @@ function Passion() {
         />
       </div>
 
-      <section className="text-left mt-32 m-0 p-0">
+      <section className="text-left mt-32 m-0 p-0 md:-translate-x-36">
         <div>
           <h2 className="text-6xl mb-8 font-bold">
             I'm <span className="text-cyan-800 font-extrabold">Jerry</span> Ji
           </h2>
           <div className="text-2xl font-semibold">
-            <p className="flex">
-              <ServerStackIcon className="w-12 mr-5" />
+            <p className="flex bg-gray-100 p-5 rounded-lg">
+              <ArrowDownIcon className="w-6 mr-3" />
+              <ServerStackIcon className="w-8 mr-5 text-violet-800" />
               <span>
                 <Typed
                   strings={["ML | DL | RL", "Databases", "Systems"]}
@@ -56,8 +60,9 @@ function Passion() {
                 />
               </span>
             </p>
-            <p className="flex mt-3">
-              <MapPinIcon className="w-12 mr-5" />
+            <p className="flex mt-3 bg-gray-100 p-5 rounded-lg">
+              <ArrowDownIcon className="w-6 mr-3" />
+              <MapPinIcon className="w-8 mr-5 text-violet-800" />
               <span>
                 <Typed
                   strings={[

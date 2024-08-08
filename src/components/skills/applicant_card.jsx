@@ -9,6 +9,7 @@ function Expandable({
   duration,
   workDetails,
   phrase,
+  link,
 }) {
   const [expanded, setExpanded] = useState(false);
 
@@ -19,7 +20,7 @@ function Expandable({
     <>
       <dl className="divide-y divide-gray-100">
         <div
-          className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 hover:cursor-pointer bg-gray-50 hover:bg-gray-100 transition-all duration-300 ease-in-out"
+          className="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 hover:cursor-pointer bg-gray-100 hover:bg-gray-200 transition-all duration-300 ease-in-out"
           onClick={toggleExpand}
         >
           <dt className="text-sm font-medium text-gray-900">Position</dt>
@@ -78,14 +79,16 @@ function Expandable({
                           : "Add Work Details"}
                       </span>
                     </div>
-                    <div className="ml-4 flex-shrink-0">
-                      <a
-                        href="https://leyantech.com"
-                        className="font-medium text-indigo-600 hover:text-indigo-500"
-                      >
-                        Visit Website
-                      </a>
-                    </div>
+                    {link && (
+                      <div className="ml-4 flex-shrink-0">
+                        <a
+                          href={link}
+                          className="font-medium text-indigo-600 hover:text-indigo-500"
+                        >
+                          Visit Website
+                        </a>
+                      </div>
+                    )}
                   </li>
                 </ul>
               </dd>
@@ -116,8 +119,10 @@ export default function ApplicantCard() {
           location="Shanghai, China"
           phrase="Internship"
           workDetails={[
-            "Modified & Compiled OneFlow (PyTorch-like DL framework) from source using Docker environment",
-            "Cleaned customer support dialogues for RAG applications",
+            "• Configure & optimize docker environment, GitLab workflow, and GPU servers for testing OneFlow (PyTorch’s Chinese clone), reducing 30% of engineers’ workload.",
+            "• Brainstorm & document 20+ use scenarios for RAG+LLM e-commerce product recommendation assistant.",
+            "• Extract 80k potential QA from Little Red Book (Chinese Instagram) product reviews on 100+ catalogs.",
+            "• Evaluate down to 50k QA’s for production with prompt engineering using OpenAI SDK + parallel computing",
           ]}
         />
         <Expandable
@@ -125,13 +130,28 @@ export default function ApplicantCard() {
           companyName={"Cornell University Bowers CIS"}
           location={"Ithaca, NY, USA"}
           phrase="Teaching Assistant"
+          workDetails={[
+            "• Attend grading sessions for the 3 midterm exams, 8 projects, and held office hours 2 times a week",
+            "• Advise a group of 3-5 students on final project in 2000+ lines of OCaml code",
+            "• Host weekly discussion sections & labs for 20+ undergrads about Data Structures, Functional Programming & Compilers in OCaml",
+          ]}
+        />
+        <Expandable
+          position={"Full Stack Externship"}
+          companyName={"ToSupply.cn 中光云链"}
+          location={"Shanghai, China"}
+          workDetails={[
+            "• Learn & practice Jenkins, Springboot for internal contract database and authentication management system with over 200+ employees, 1,000+ transactions.",
+            "• Contribute & PR to a mock React + Django full stack with automatically creating contracts for clients to sign.",
+          ]}
+          phrase="Externship"
         />
         <Expandable
           position={"Frontend Developer Intern"}
           companyName={"International Children's Education Association"}
           workDetails={[
-            "Developed a website for the organization",
-            "Worked with a team of 3",
+            "• Implemented Global AirLearning program, serving 120+ presentations, 700+ volunteers.",
+            "• Lead & onboard a team of 3 the development of a chess tournament registration website with authentication using React, Redux",
           ]}
           phrase="Volunteering Internship"
         />
