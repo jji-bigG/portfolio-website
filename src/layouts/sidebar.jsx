@@ -394,7 +394,7 @@ function Sidebar({ children, current }) {
                 </li>
                 <li className="mt-auto">
                   <a
-                    href="/Ruiyang_Ji_Resume.pdf"
+                    href="/Ruiyang Ji Resume.pdf"
                     className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-sky-200 hover:bg-sky-700 hover:text-white"
                   >
                     <ClipboardDocumentCheckIcon
