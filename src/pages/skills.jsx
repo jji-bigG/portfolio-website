@@ -25,17 +25,19 @@ const Skills = () => {
         msg="Frameworks:"
         logos={[
           "/images/logos/pytorch.png",
+          "/images/logos/pandas.png",
           "/images/logos/nextjs.png",
-          "/images/logos/nuxtjs.png",
+          "/images/logos/springboot.png",
         ]}
       />
       <Logos
         msg="Microservices:"
         logos={[
-          "/images/logos/supabase.png",
           "/images/logos/docker.png",
-          "/images/logos/mongodb.png",
+          "/images/logos/jenkins.png",
           "/images/logos/postgresql cp.png",
+          "/images/logos/hf.png",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8_DtedtVwk8-scOCBoMzzSeSU_xWbF-5BVA&s",
         ]}
       />
       <ApplicantCard />
