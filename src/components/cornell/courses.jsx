@@ -5,35 +5,45 @@ const people = [
     name: "CS 4780",
     title: "Machine Learning for Intelligent Systems",
     role: "CS",
-    email: "janecooper@example.com",
-    telephone: "+1-202-555-0170",
+    professor: "Kilian Q. Weinberger",
     imageUrl: "/images/kilian.jpeg",
   },
   {
     name: "MATH 2940",
     title: "Linear Algebra for Engineers",
     role: "Math",
-    email: "janecooper@example.com",
-    telephone: "+1-202-555-0170",
+    professor: "Alexander Townsend",
     imageUrl: "/images/townsend.jpeg",
   },
   {
     name: "CS 3110",
     title: "Functional Programming and Data Structures",
     role: "CS",
-    email: "janecooper@example.com",
-    telephone: "+1-202-555-0170",
+    professor: "Michael George Clarkson",
     imageUrl: "/images/ocaml.png",
   },
   {
     name: "MATH 4710",
     title: "Probabilities Theory",
     role: "Math",
-    email: "janecooper@example.com",
-    telephone: "+1-202-555-0170",
+    professor: "Kihoon Seong",
     imageUrl: "/images/gammadistr.webp",
   },
-  // More people...
+  {
+    name: "CS 2110",
+    title: "Object-Oriented Programming and Data Structures",
+    role: "CS",
+    professor: "Curran D. Mulhberger",
+    imageUrl: "/images/logos/java.png",
+  },
+  {
+    name: "CS 2800",
+    title: "Discrete Structures",
+    role: "CS",
+    professor: "Matthew Eichhorn",
+    imageUrl:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9MhMPzNfe9XnyhweGqFFTF90-e0C3m6rMQw&s",
+  },
 ];
 
 export default function CornellCourses() {
@@ -44,7 +54,7 @@ export default function CornellCourses() {
     >
       {people.map((person) => (
         <li
-          key={person.email}
+          key={person.name}
           className="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow"
         >
           <div className="flex flex-1 flex-col p-8">
@@ -61,6 +71,8 @@ export default function CornellCourses() {
               <dd className="text-sm text-gray-500">{person.title}</dd>
               <dt className="sr-only">Role</dt>
               <dd className="mt-3">
+                <dd className="text-sm text-gray-900">{person.professor}</dd>
+
                 {
                   // person.role
                   person.role === "CS" ? (
@@ -80,7 +92,7 @@ export default function CornellCourses() {
               </dd>
             </dl>
           </div>
-          <div>
+          {/* <div>
             <div className="-mt-px flex divide-x divide-gray-200">
               <div className="flex w-0 flex-1">
                 <a
@@ -107,7 +119,7 @@ export default function CornellCourses() {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
         </li>
       ))}
     </ul>
