@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import Sidebar, { SidebarTwoColumn } from "../layouts/sidebar";
-import { useLocation } from "react-router-dom";
+import React from "react";
+import { SidebarTwoColumn } from "../layouts/sidebar";
 
 import { ReactTyped as Typed } from "react-typed";
 
@@ -12,12 +11,13 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 import { MapPinIcon, ServerStackIcon } from "@heroicons/react/24/solid";
-import { ArrowDownIcon } from "@heroicons/react/24/outline";
 import AutoScrollingGallery from "../components/about/photography-aside";
+import {
+  GlobeAltIcon,
+  WrenchScrewdriverIcon,
+} from "@heroicons/react/24/outline";
 
 function Passion() {
-  const [openAbout, setOpenAbout] = useState("hidden");
-
   return (
     <SidebarTwoColumn aside={<AutoScrollingGallery />}>
       <section className="text-left m-0 p-0 md:-translate-x-36">
@@ -37,16 +37,18 @@ function Passion() {
 
         {/* the actual section */}
         <div className="-translate-y-40">
-          <img
-            className="mb-10 rounded-full hover:select-none hover:shadow-lg transition duration-300 hover:cursor-pointer w-36 mt-52"
-            src="/images/IMG_2441.JPG"
-            alt=""
-          />
-          <h2 className="text-6xl mb-8 font-bold">
-            I'm <span className="text-cyan-800 font-extrabold">Jerry</span> Ji
-          </h2>
+          <div className="ml-5">
+            <img
+              className="mb-10 rounded-full hover:select-none hover:shadow-lg transition duration-300 hover:cursor-pointer w-36 mt-52"
+              src="/images/IMG_2441.JPG"
+              alt=""
+            />
+            <h2 className="text-6xl mb-8 font-bold">
+              I'm <span className="text-cyan-800 font-extrabold">Jerry</span> Ji
+            </h2>
+          </div>
           <div className="text-2xl font-semibold">
-            <p className="flex bg-gray-100 p-5 rounded-lg">
+            <p className="flex justify-between bg-gray-100 p-5 rounded-lg">
               {/* <ArrowDownIcon className="w-6 mr-3" /> */}
               <ServerStackIcon className="w-10 mr-5 text-violet-800" />
               <span className="mt-1">
@@ -55,9 +57,9 @@ function Passion() {
                     "Machine Learning",
                     "LLM Transformers",
                     "Vision Transformers",
-                    "Database Management",
-                    "DevOps & MLOps Systems",
-                    "Continuous Deployments",
+                    "Database Systems",
+                    "DevOps MLOps",
+                    "CI/CD Pipelines",
                   ]}
                   typeSpeed={50}
                   backSpeed={25}
@@ -65,8 +67,9 @@ function Passion() {
                   loop
                 />
               </span>
+              <WrenchScrewdriverIcon className="w-10 ml-5 text-violet-800" />
             </p>
-            <p className="flex mt-3 bg-gray-100 p-5 rounded-lg">
+            <p className="flex justify-between mt-3 bg-gray-100 p-5 rounded-lg">
               {/* <ArrowDownIcon className="w-6 mr-3" /> */}
               <MapPinIcon className="w-10 mr-5 text-violet-800" />
               <span className="mt-1">
@@ -82,6 +85,7 @@ function Passion() {
                   loop
                 />
               </span>
+              <GlobeAltIcon className="w-10 ml-5 text-violet-800" />
             </p>
           </div>
 
