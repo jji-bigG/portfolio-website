@@ -13,6 +13,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 import { MapPinIcon, ServerStackIcon } from "@heroicons/react/24/solid";
 import AutoScrollingGallery from "../components/about/photography-aside";
 import {
+  ClipboardDocumentCheckIcon,
   GlobeAltIcon,
   WrenchScrewdriverIcon,
 } from "@heroicons/react/24/outline";
@@ -37,16 +38,17 @@ function Passion() {
 
         {/* the actual section */}
         <div className="-translate-y-40">
-          <div className="ml-5">
-            <img
-              className="mb-10 rounded-full hover:select-none hover:shadow-lg transition duration-300 hover:cursor-pointer w-36 mt-52"
-              src="/images/IMG_2441.JPG"
-              alt=""
-            />
+          <img
+            className="mb-10 rounded-full select-none hover:select-none hover:shadow-lg transition duration-300 hover:cursor-pointer w-36 mt-52"
+            src="/images/IMG_2441.JPG"
+            alt=""
+          />
+          <div className="flex justify-between">
             <h2 className="text-6xl mb-8 font-bold">
               I'm <span className="text-cyan-800 font-extrabold">Jerry</span> Ji
             </h2>
           </div>
+
           <div className="text-2xl font-semibold">
             <p className="flex justify-between bg-gray-100 p-5 rounded-lg">
               {/* <ArrowDownIcon className="w-6 mr-3" /> */}
@@ -90,6 +92,12 @@ function Passion() {
           </div>
 
           <ul className="flex space-x-5 text-5xl mt-10">
+            <li className="text-sm w-fit h-20 p-2 bg-gradient-to-r from-cyan-800 to-violet-800 text-white rounded-lg hover:shadow-lg hover:cursor-pointer hover:select-none transition duration-300">
+              <a href="/Ruiyang Ji Resume.pdf" download className="text-center">
+                <ClipboardDocumentCheckIcon className="h-10 ml-2 mb-0" />
+                <span className="text-sm mt-0">Resume</span>
+              </a>
+            </li>
             <li className="hover:text-cyan-800 transition-all duration-300 ease-in-out hover:scale-125 hover:cursor-pointer hover:select-none hover:bg-gray-100 p-3 rounded-xl">
               <a
                 aria-label="LinkedIn"
