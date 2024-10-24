@@ -114,26 +114,49 @@ export default function ApplicantCard() {
       </div>
       <div className="border-t border-gray-100">
         <Expandable
-          position="LLM & E-Commerce Intern"
-          companyName="LeYan Technologies 乐言科技"
+          position="Machine Learning Engineer - LLM Algorithms"
+          companyName="LeYan Technologies"
           location="Shanghai, China"
           phrase="Internship"
           workDetails={[
-            "• Configure & optimize docker environment, GitLab workflow, and GPU servers for testing OneFlow (PyTorch’s Chinese clone), reducing 30% of engineers’ workload.",
-            "• Brainstorm & document 20+ use scenarios for RAG+LLM e-commerce product recommendation assistant.",
-            "• Extract 80k potential QA from Little Red Book (Chinese Instagram) product reviews on 100+ catalogs.",
-            "• Evaluate down to 50k QA’s for production with prompt engineering using OpenAI SDK + parallel computing",
+            "Configured optimized Docker environments and GitLab CI/CD pipelines onto 3 GPU servers on cloud and in house, reducing deployment time by 30% for OneFlow (PyTorch equivalent) DL testing suite.",
+            "Developed RAG+LLM product recommendation assistant by extracting 100k+ QA pairs from terabytes of social media user data.",
+            "Refined 50k high-quality data points through generative AI and prompt engineering, using OpenAI SDK and Pandas while parallel computing.",
           ]}
         />
+
         <Expandable
-          position={"CS 3110 Teaching Assistant"}
-          companyName={"Cornell University Bowers CIS"}
-          location={"Ithaca, NY, USA"}
+          position="Full Stack Enterprise Software Engineer"
+          companyName="Cornell CMSX"
+          location="Ithaca, NY, US"
+          phrase="Software Engineer"
+          workDetails={[
+            "Optimizing Cornell’s course management system for 8,000+ students, managing a 100k+ line Java JSP backend, Jakarta (Spring Boot) RESTful API for reliable production.",
+            "Collaborated with cross-functional engineers and performed code reviews through git + GitHub to prioritize bug fixes, track progress, and ensure agile alignment with project objectives.",
+            "Resolved 2 support ticket bugs and implemented 1 new React feature/component per week.",
+          ]}
+        />
+
+        <Expandable
+          position="React Frontend Developer - Data Analytics & Apps"
+          companyName="Cornell Electric Vehicles Project Team"
+          location="Ithaca, NY, US"
+          phrase="Developer"
+          workDetails={[
+            "Maintained React LiveTiming dashboard to aggregate EV status data with various visualizations.",
+            "Worked with Electrical subteam to develop a Rust Embedded Software to send monitoring data to Kafka.",
+          ]}
+        />
+
+        <Expandable
+          position="CS 3110 Teaching Assistant"
+          companyName="Cornell University"
+          location="Ithaca, NY, US"
           phrase="Teaching Assistant"
           workDetails={[
-            "• Attend grading sessions for the 3 midterm exams, 8 projects, and held office hours 2 times a week",
-            "• Advise a group of 3-5 students on final project in 2000+ lines of OCaml code",
-            "• Host weekly discussion sections & labs for 20+ undergrads about Data Structures, Functional Programming & Compilers in OCaml",
+            "Guided 300+ students in functional programming and debugging OCaml implementations.",
+            "Held office hours 2 times a week for 2 hours each, providing support for debugging and explaining complex functional programming concepts and data structures.",
+            "Managed two teams of 5 students, guiding them through the design and implementation of final projects, each involving 2000+ lines of OCaml code.",
           ]}
         />
         <Expandable
@@ -147,7 +170,7 @@ export default function ApplicantCard() {
           phrase="Externship"
         />
         <Expandable
-          position={"Frontend Developer Intern"}
+          position={"Frontend Developer Volunteer"}
           companyName={"International Children's Education Association"}
           workDetails={[
             "• Implemented Global AirLearning program, serving 120+ presentations, 700+ volunteers.",
